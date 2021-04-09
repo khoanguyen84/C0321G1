@@ -1,0 +1,50 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <!-- <button
+        onmouseover="this.innerText= new Date(); this.style.color='red'; this.style.backgroundColor='yellow'"
+        onmouseout="this.innerText='Show datetime'">Show datetime</button> -->
+
+        <!-- <p>Hello everyone</p> -->
+        <input type="color" onchange="document.getElementsByTagName('body')[0].style.backgroundColor=this.value;">
+        <img src="images/off.png" alt="">
+        <br>
+        <!-- <button onclick="controllLight()">On</button> -->
+        <button onclick="
+               let light = document.getElementsByTagName('img')[0];
+               if(this.innerText === 'On'){
+                    light.src ='images/on.png';
+                    this.innerText = 'Off';
+               }else{
+                   light.src = 'images/off.png';
+                   this.innerText = 'On';
+               }
+        ">On</button>
+        <script>
+            // window.alert('width: ' + window.innerWidth + ', Height:' + window.innerHeight);
+
+            // window.alert(window.history.state)
+            // window.document.write("Hello everyone");
+
+            // function controllLight(){
+            //    let button = window.document.getElementsByTagName('button')[0];
+            //    let light = document.getElementsByTagName('img')[0];
+            //    if(button.innerText === 'On'){
+            //         light.src ='images/on.png';
+            //         button.innerText = 'Off';
+            //    }else{
+            //        light.src = 'images/off.png';
+            //        button.innerText = 'On';
+            //    }
+            // }
+
+            function changeBG(el){
+                document.getElementsByTagName('body')[0].style.backgroundColor=el.value;
+            }
+        </script>
+
+    </body>
+</html>
