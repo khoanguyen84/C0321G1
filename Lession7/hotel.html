@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Checkin date:</td>
+            <td>
+                <input type="date" id="checkin" onchange="payment()">
+            </td>
+        </tr>
+        <tr>
+            <td>Checkout date:</td>
+            <td>
+                <input type="date" id="checkout" onchange="payment()">
+            </td>
+        </tr>
+        <tr>
+            <td>Room type</td>
+            <td>
+                <select id="roomType" onchange="payment()">
+                    <option value="100000">A</option>
+                    <option value="90000">B</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" onclick="payment()" value="Payment">
+            </td>
+        </tr>
+    </table>
+    <h3 id="amount"></h3>
+    <script src="hotel.js"></script>
+</body>
+</html>
