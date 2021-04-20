@@ -1,6 +1,19 @@
 const step = 5;
 const side1 = '50px';
 const side2 = '100px';
+
+let setting = confirm('do you want to use keyboard?')
+if(setting == true){
+    document.getElementsByTagName('body')[0].addEventListener('keydown', controlCar);
+}
+
+setInterval(
+    function(){
+        document.getElementsByTagName('body')[0].removeEventListener('keydown', controlCar);
+    }
+    , 5*1000);
+
+
 function init(){
     let car = document.getElementById('car');
     car.src = 'images/right.png';
@@ -9,7 +22,7 @@ function init(){
     car.style.position ='relative';
     car.style.left = '0px';
     car.style.top = '0px';
-    window.addEventListener('keydown', controlCar)
+    // window.addEventListener('keydown', controlCar)
 
 }
 
