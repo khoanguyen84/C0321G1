@@ -1,0 +1,16 @@
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.csprojAssemblyReference.cache
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.AssemblyInfoInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.AssemblyInfo.cs
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.csproj.CoreCompileInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\Lession2\bin\Debug\net5.0\Lession2.exe
+C:\CodeGym\Class\C0321G1\Module2\Lession2\bin\Debug\net5.0\Lession2.deps.json
+C:\CodeGym\Class\C0321G1\Module2\Lession2\bin\Debug\net5.0\Lession2.runtimeconfig.json
+C:\CodeGym\Class\C0321G1\Module2\Lession2\bin\Debug\net5.0\Lession2.runtimeconfig.dev.json
+C:\CodeGym\Class\C0321G1\Module2\Lession2\bin\Debug\net5.0\Lession2.dll
+C:\CodeGym\Class\C0321G1\Module2\Lession2\bin\Debug\net5.0\ref\Lession2.dll
+C:\CodeGym\Class\C0321G1\Module2\Lession2\bin\Debug\net5.0\Lession2.pdb
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.dll
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\ref\Lession2.dll
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.pdb
+C:\CodeGym\Class\C0321G1\Module2\Lession2\obj\Debug\net5.0\Lession2.genruntimeconfig.cache
