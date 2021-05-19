@@ -4,6 +4,11 @@ namespace Lession2
     class ArrayDemo
     {
         public static void Main(string[] args){
+            int[] scores = new int[] { 1,2,3,4,5,6,7,8 };
+            // Console.Write(scores.Length);
+            Array.Resize(ref scores, scores.Length + 1);
+            scores[8] = 9;
+            Console.Write(scores[8]);
             // int[] intArr = new int[5];
             // int[] intArr = new int[5]{10,20,30,40,50};
             // for(int i =0; i< intArr.Length; i++){
@@ -45,23 +50,23 @@ namespace Lession2
             //                                 new int[4] { 1,2,3,4},
             //                                 new int[6] { 1,2,3,4,5,6}
             //                               };
-            int[][] matrix = new int[2][];  
-            Random rndCol = new Random();
-            Random rndVal = new Random();
-            for(int i = 0; i< matrix.Length; i++){
-                int size = rndCol.Next(5,10);
-                int[] arr = new int[size];
-                for(int j=0; j< size; j++){
-                    arr[j] = rndVal.Next(10,60);
-                }
-                matrix[i] = arr;
-            }
-            for(int i = 0; i< matrix.Length; i++){
-                for(int j=0; j< matrix[i].Length; j++){
-                    Console.Write($"{matrix[i][j]} ");
-                }
-                Console.WriteLine();
-            }
+            // int[][] matrix = new int[2][];  
+            // Random rndCol = new Random();
+            // Random rndVal = new Random();
+            // for(int i = 0; i< matrix.Length; i++){
+            //     int size = rndCol.Next(5,10);
+            //     int[] arr = new int[size];
+            //     for(int j=0; j< size; j++){
+            //         arr[j] = rndVal.Next(10,60);
+            //     }
+            //     matrix[i] = arr;
+            // }
+            // for(int i = 0; i< matrix.Length; i++){
+            //     for(int j=0; j< matrix[i].Length; j++){
+            //         Console.Write($"{matrix[i][j]} ");
+            //     }
+            //     Console.WriteLine();
+            // }
         }
     }
 }
