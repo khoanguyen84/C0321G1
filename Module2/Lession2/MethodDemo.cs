@@ -18,10 +18,25 @@ namespace Lession2
 
             // int position;
             // Console.WriteLine($"Total value divide by 5 = {SumValues(out int position)}, at position: {position}");
-            int[] array = GenerateArray(10);
-            Console.WriteLine(string.Join(",", array));
+            // int[] array = GenerateArray(10);
+            // Console.WriteLine(string.Join(",", array));
+            // object s1 = "CodeGym";
+            // object s2 = new string("CodeGym");
+            // Console.WriteLine(s1 == s2);
+            // Console.WriteLine(s1.Equals(s2));
+            // OverLoading ~ Tải bội
         }
 
+        public static int NumberDouble(int n){
+            return n + n;
+        }
+
+        public static float Sum(float n1, float n2){
+            return n1 + n2;
+        }
+        public static int Sum(int n){
+            return n + n;
+        }
         public static int Sum(int n1, int n2)
         {
             int total = n1 + n2;
