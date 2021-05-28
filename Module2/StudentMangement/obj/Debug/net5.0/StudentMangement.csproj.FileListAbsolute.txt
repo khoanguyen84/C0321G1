@@ -1,0 +1,16 @@
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\bin\Debug\net5.0\StudentMangement.exe
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\bin\Debug\net5.0\StudentMangement.deps.json
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\bin\Debug\net5.0\StudentMangement.runtimeconfig.json
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\bin\Debug\net5.0\StudentMangement.runtimeconfig.dev.json
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\bin\Debug\net5.0\StudentMangement.dll
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\bin\Debug\net5.0\ref\StudentMangement.dll
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\bin\Debug\net5.0\StudentMangement.pdb
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.csprojAssemblyReference.cache
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.AssemblyInfoInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.AssemblyInfo.cs
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.csproj.CoreCompileInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.dll
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\ref\StudentMangement.dll
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.pdb
+C:\CodeGym\Class\C0321G1\Module2\StudentMangement\obj\Debug\net5.0\StudentMangement.genruntimeconfig.cache

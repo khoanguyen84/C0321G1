@@ -2,11 +2,15 @@
 
 namespace Menu
 {
-    class Program
+    public class Program
     {
         const int min = 1;
         const int max = 5;
         const int exitCode = 5;
+        const int addOperand = 1;
+        const int subtractOperand = 2;
+        const int multipleOperand = 3;
+        const int divideOperand = 4;
         static void Main(string[] args)
         {
             Process();
@@ -40,23 +44,23 @@ namespace Menu
                 Console.Clear();
                 switch(selected)
                 {
-                    case 1:{
-                        Console.WriteLine("You are selected 1");
+                    case (int)Helper.Operand.Add:{
+                        Calculator((int)Helper.Operand.Add);
                         break;
                     }
-                    case 2:{
-                        Console.WriteLine("You are selected 2");
+                    case subtractOperand:{
+                        Calculator((int)Helper.Operand.Substract);
                         break;
                     }
-                    case 3:{
-                        Console.WriteLine("You are selected 3");
+                    case Helper.Operand2.Multiple:{
+                        Calculator((int)Helper.Operand.Multiple);
                         break;
                     }
-                    case 4:{
-                        Console.WriteLine("You are selected 4");
+                    case divideOperand:{
+                        Calculator((int)Helper.Operand.Divide);
                         break;
                     }
-                    case 5:{
+                    case (int)Helper.Operand.Exits:{
                         Environment.Exit(0);
                         break;
                     }
@@ -65,5 +69,33 @@ namespace Menu
             }
             while (selected != exitCode);
         }
+
+        public static void Calculator(int operand){
+            Console.Write("Enter number 1:");
+            float number1 = float.Parse(Console.ReadLine());
+            Console.Write("Enter number 2:");
+            float number2 = float.Parse(Console.ReadLine());
+            if(operand == (int)Helper.Operand.Add){
+                Console.WriteLine($"{number1} + {number2} = {number1 + number2}");
+            }
+            if(operand == (int)Helper.Operand.Substract){
+                Console.WriteLine($"{number1} - {number2} = {number1 - number2}");
+            }
+            if(operand == (int)Helper.Operand.Multiple){
+                Console.WriteLine($"{number1} x {number2} = {number1 * number2}");
+            }
+            if(operand == (int)Helper.Operand.Divide){
+                Console.WriteLine(number2 == 0.0 ? $"Error divide by zero!" : $"{number1} : {number2} = {number1 / number2}");
+                // if(number2 == 0.0){
+                //     Console.WriteLine($"Error divide by zero!");    
+                // }
+                // else
+                // {
+                //     Console.WriteLine($"{number1} : {number2} = {number1 / number2}");
+                // }
+            }
+        }
     }
+
+    
 }
