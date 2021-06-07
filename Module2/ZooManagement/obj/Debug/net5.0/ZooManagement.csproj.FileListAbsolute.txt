@@ -1,0 +1,16 @@
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\bin\Debug\net5.0\ZooManagement.exe
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\bin\Debug\net5.0\ZooManagement.deps.json
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\bin\Debug\net5.0\ZooManagement.runtimeconfig.json
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\bin\Debug\net5.0\ZooManagement.runtimeconfig.dev.json
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\bin\Debug\net5.0\ZooManagement.dll
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\bin\Debug\net5.0\ref\ZooManagement.dll
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\bin\Debug\net5.0\ZooManagement.pdb
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.csprojAssemblyReference.cache
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.AssemblyInfoInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.AssemblyInfo.cs
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.csproj.CoreCompileInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.dll
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ref\ZooManagement.dll
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.pdb
+C:\CodeGym\Class\C0321G1\Module2\ZooManagement\obj\Debug\net5.0\ZooManagement.genruntimeconfig.cache

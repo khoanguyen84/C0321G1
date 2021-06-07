@@ -1,0 +1,16 @@
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\bin\Debug\net5.0\MyGeneric.exe
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\bin\Debug\net5.0\MyGeneric.deps.json
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\bin\Debug\net5.0\MyGeneric.runtimeconfig.json
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\bin\Debug\net5.0\MyGeneric.runtimeconfig.dev.json
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\bin\Debug\net5.0\MyGeneric.dll
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\bin\Debug\net5.0\ref\MyGeneric.dll
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\bin\Debug\net5.0\MyGeneric.pdb
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.csprojAssemblyReference.cache
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.AssemblyInfoInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.AssemblyInfo.cs
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.csproj.CoreCompileInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.dll
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\ref\MyGeneric.dll
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.pdb
+C:\CodeGym\Class\C0321G1\Module2\MyGeneric\obj\Debug\net5.0\MyGeneric.genruntimeconfig.cache
