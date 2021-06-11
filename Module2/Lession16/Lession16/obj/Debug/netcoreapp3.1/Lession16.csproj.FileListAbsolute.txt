@@ -1,0 +1,15 @@
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\bin\Debug\netcoreapp3.1\Lession16.exe
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\bin\Debug\netcoreapp3.1\Lession16.deps.json
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\bin\Debug\netcoreapp3.1\Lession16.runtimeconfig.json
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\bin\Debug\netcoreapp3.1\Lession16.runtimeconfig.dev.json
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\bin\Debug\netcoreapp3.1\Lession16.dll
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\bin\Debug\netcoreapp3.1\Lession16.pdb
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.csprojAssemblyReference.cache
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.AssemblyInfoInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.AssemblyInfo.cs
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.csproj.CoreCompileInputs.cache
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.csproj.CopyComplete
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.dll
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.pdb
+C:\CodeGym\Class\C0321G1\Module2\Lession16\Lession16\obj\Debug\netcoreapp3.1\Lession16.genruntimeconfig.cache

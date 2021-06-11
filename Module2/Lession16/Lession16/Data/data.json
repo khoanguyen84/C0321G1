@@ -1,0 +1,47 @@
+{
+  "matrix": [
+    [ 1, 2, 4, 5 ],
+    [ 1, 2, 4, 5 ]
+  ],
+  "students": [
+    {
+      "StudentId": 1,
+      "Fullname": "Khoa",
+      "Age": 18,
+      "scores": [
+        {
+          "name": "Toan",
+          "score": 6.9
+        },
+        {
+          "name": "Ly",
+          "score": 7.9
+        },
+        {
+          "name": "Hoa",
+          "score": 8.9
+        }
+      ]
+    },
+    {
+      "StudentId": 2,
+      "Fullname": "Nam",
+      "Age": 18,
+      "scores": [
+        {
+          "name": "Toan",
+          "score": 6.9
+        },
+        {
+          "name": "Ly",
+          "score": 7.9
+        },
+        {
+          "name": "Hoa",
+          "score": 8.9
+        }
+      ]
+
+    }
+  ]
+}

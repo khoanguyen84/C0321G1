@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 
 namespace Lession15
 {
@@ -15,12 +16,13 @@ namespace Lession15
                 data = sr.ReadToEnd();
             }
 
-            string[] StrArr = data.Split(' ');
-            int[] IntArr = new int[StrArr.Length];
-            for(int i = 0; i < StrArr.Length; i++){
-                IntArr[i] = int.Parse(StrArr[i]);
-            }
-
+            // string[] StrArr = data.Split(' ');
+            // int[] IntArr = new int[StrArr.Length];
+            // for(int i = 0; i < StrArr.Length; i++){
+            //     IntArr[i] = int.Parse(StrArr[i]);
+            // }
+            
+            int[] IntArr = data.Split(' ').Select(e => int.Parse(e)).ToArray();
             for(int i = 0; i < IntArr.Length; i++){
                 IntArr[i] *= 2;
             }

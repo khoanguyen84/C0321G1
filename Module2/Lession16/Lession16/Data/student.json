@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "StudentId": 1,
+      "Fullname": "Khoa",
+      "Age": 18,
+      "AveScore": 7.9
+    },
+    {
+      "StudentId": 2,
+      "Fullname": "Nam",
+      "Age": 18,
+      "AveScore": 7.9
+    }
+  ]
+}
