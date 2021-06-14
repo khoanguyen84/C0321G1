@@ -1,0 +1,48 @@
+{
+    "Students": [
+        {
+            "MaHS": 2,
+            "HoTen": "Thanh Nguyen",
+            "GioiTinh": "Nam",
+            "Lop": "10/2",
+            "MonHoc": [
+                {
+                    "TenMon": "Toán",
+                    "Diem": 7.6
+                },
+                {
+                    "TenMon": "Lý",
+                    "Diem": 6.6
+                },
+                {
+                    "TenMon": "Hóa",
+                    "Diem": 9.1
+                }
+            ],
+            "DTB": 9.625,
+            "XepLoai": "Xuat sac"
+        },
+        {
+            "MaHS": 1,
+            "HoTen": "Khoa Nguyen",
+            "GioiTinh": "Nam",
+            "Lop": "10/2",
+            "MonHoc": [
+                {
+                    "TenMon": "Toán",
+                    "Diem": 5.6
+                },
+                {
+                    "TenMon": "Lý",
+                    "Diem": 7.6
+                },
+                {
+                    "TenMon": "Hóa",
+                    "Diem": 8.1
+                }
+            ],
+            "DTB": 8.125,
+            "XepLoai": "Gioi"
+        }
+    ]
+}
