@@ -1,0 +1,82 @@
+*, *::before, *::after{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3{
+    color:blue;
+}
+
+h2{
+    color: green;
+}
+/* 
+h1, h4{
+    color:violet !important;
+} */
+
+.violet{
+    color:violet !important;
+}
+
+#color-area{
+    width: 600px;
+    height: 200px;
+    /* background-image: linear-gradient(to left top, darkorange, yellow); */
+    background-image: radial-gradient(circle, red, yellow, green);
+    padding:10px 5px;
+    /* 
+        padding-top:5px;
+        padding-right:5px;
+        padding-bottom:5px;
+        padding-left:5px;
+     */
+    margin: 10px;
+    border: 5px solid burlywood;
+}
+
+/* #color-area:hover{
+    background-color: palegreen;
+} */
+
+a[target]{
+    text-decoration: none;
+}
+
+input[type='text']{
+    border:none;
+    outline: none;
+    border-bottom: 1px dotted black;
+    margin-bottom: 10px;
+}
+
+/* #menu li{
+    color:orange
+}
+
+#menu > li{
+    background-color: orchid;
+} */
+
+#menu li:first-child{
+    color:red;
+}
+
+a::after{
+    content: " | ";
+}
+a::before{
+    content: "* ";
+}
+
+p::first-letter{
+    font-size: 30px;
+}
+
+p::first-line{
+    background-color: green;
+    color: white;
+}
+
+p::selection{
+    background-color: orange;
+    color: black;
+}

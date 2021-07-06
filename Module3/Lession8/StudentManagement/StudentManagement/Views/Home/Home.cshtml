@@ -1,0 +1,13 @@
+﻿@model List<StudentManagement.Models.Student>
+
+@foreach(var student in Model)
+{
+    <div>
+        <img src="@student.Avatar" />
+        <h3>Student Id: @student.Id</h3>
+        <h3>@student.Dob.ToString("dd/MM/yyyy")</h3>
+        <h1>@student.Fullname</h1>
+    </div>
+}
+
+
