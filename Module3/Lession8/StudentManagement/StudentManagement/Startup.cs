@@ -28,16 +28,20 @@ namespace StudentManagement
                 app.UseDeveloperExceptionPage();
             }
             
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvcWithDefaultRoute();
             app.UseStaticFiles();
+            app.UseMvc(routers =>
+            {
+                //routers.MapRoute("two-paras", "{Controller=Home}/{Action=Index}/{para1?}/{para2?}");
+                routers.MapRoute("default", "{Controller=Home}/{Action=Index}/{id?}");
+            });
+
+
             //app.UseRouting();
 
             //app.UseEndpoints(endpoints =>
             //{
-            //    endpoints.MapGet("/", async context =>
-            //    {
-            //        await context.Response.WriteAsync("Hello World!");
-            //    });
+            //    endpoints.MapControllerRoute("default", "{Controller=Home}/{Action=Index}/{id?}");
             //});
         }
     }

@@ -1,6 +1,6 @@
 ﻿@model List<StudentManagement.Models.Student>
 @{
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
 }
 @*<div class="row">*@
     @foreach (var student in Model)
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <a href="#" class="btn btn-primary">Detail</a>
+                    <a href="/Home/Detail/@student.Id" class="btn btn-primary">Detail</a>
                 </div>
             </div>
         </div>

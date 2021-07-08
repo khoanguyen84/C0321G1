@@ -38,9 +38,21 @@ namespace StudentManagement.Controllers
             return View("~/Views/Home/Home.cshtml", Students);
         }
 
-        public IActionResult Detail()
+        public IActionResult Detail(int id)
         {
+            //TempData["Id"] = id;
+            //ViewData["Id"] = id;
+            ViewBag.ID = id;
             return View();
+        }
+
+        public IActionResult Detail2(string para1, string para2)
+        {
+            //TempData["Id"] = id;
+            //ViewData["Id"] = id;
+            ViewBag.Para1 = para1;
+            ViewBag.Para2 = para2;
+            return View("~/Views/Home/Detail.cshtml");
         }
     }
 }
