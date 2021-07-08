@@ -1,13 +1,56 @@
 ﻿@model List<StudentManagement.Models.Student>
-
-@foreach(var student in Model)
-{
-    <div>
-        <img src="@student.Avatar" />
-        <h3>Student Id: @student.Id</h3>
-        <h3>@student.Dob.ToString("dd/MM/yyyy")</h3>
-        <h1>@student.Fullname</h1>
-    </div>
+@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@*<div class="row">*@
+    @foreach (var student in Model)
+    {
+        <div class="col-sm-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    @student.Fullname
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-ms-4">
+                            <img src=@Url.Content(student.Avatar) class="img-responsive" style="width:25%" alt="Image">
+                        </div>
+                        <div class="col-ms-8">
+                            <p>Student Id: @student.Id</p>
+                            <p>Dob:@student.Dob.ToString("dd/MM/yyyy")</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="#" class="btn btn-primary">Detail</a>
+                </div>
+            </div>
+        </div>
+    }
+@*</div>*@
 
+
+@*<div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+        </div>
+    </div>*@
 

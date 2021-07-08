@@ -17,25 +17,30 @@ namespace StudentManagement.Controllers
                     Id = 1,
                     Fullname = "Buu Nguyen",
                     Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "images/avatar10.jpg"
+                    Avatar = "/images/avatar10.jpg"
                 },
                 new Student()
                 {
                     Id = 2,
                     Fullname = "Nam Thu",
                     Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "images/avatar10.jpg"
+                    Avatar = "/images/avatar10.jpg"
                 },
                 new Student()
                 {
                     Id = 3,
                     Fullname = "Nam Ngoc",
                     Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "images/avatar10.jpg"
+                    Avatar = "/images/avatar10.jpg"
                 }
             };
 
             return View("~/Views/Home/Home.cshtml", Students);
+        }
+
+        public IActionResult Detail()
+        {
+            return View();
         }
     }
 }

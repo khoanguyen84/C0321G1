@@ -27,8 +27,9 @@ namespace StudentManagement
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseStaticFiles();
+            
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
             //app.UseRouting();
 
             //app.UseEndpoints(endpoints =>
