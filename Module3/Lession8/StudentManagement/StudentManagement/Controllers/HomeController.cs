@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Models;
+using StudentManagement.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,43 +10,38 @@ namespace StudentManagement.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IStudentService studentService;
+
+        public HomeController(IStudentService studentService)
+        {
+            this.studentService = studentService;
+        }
         public IActionResult Index()
         {
-            List<Student> Students = new List<Student>() {
-                new Student()
-                {
-                    Id = 1,
-                    Fullname = "Buu Nguyen",
-                    Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "/images/avatar10.jpg"
-                },
-                new Student()
-                {
-                    Id = 2,
-                    Fullname = "Nam Thu",
-                    Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "/images/avatar10.jpg"
-                },
-                new Student()
-                {
-                    Id = 3,
-                    Fullname = "Nam Ngoc",
-                    Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "/images/avatar10.jpg"
-                }
-            };
-
-            return View("~/Views/Home/Home.cshtml", Students);
+            return View("~/Views/Home/Home.cshtml", studentService.GetStudents());
         }
 
         public IActionResult Detail(int id)
         {
-            //TempData["Id"] = id;
-            //ViewData["Id"] = id;
-            ViewBag.ID = id;
+            var student = studentService.GetStudent(id);
+            return View(student);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Create(Student student)
+        {
+            studentService.Create(student);
+            return RedirectToAction("Index");
+        }
+
+        //Attribute Routing
+        /*[Route("/Home/Details/{para1}/{para2}")]
         public IActionResult Detail2(string para1, string para2)
         {
             //TempData["Id"] = id;
@@ -53,6 +49,6 @@ namespace StudentManagement.Controllers
             ViewBag.Para1 = para1;
             ViewBag.Para2 = para2;
             return View("~/Views/Home/Detail.cshtml");
-        }
+        }*/
     }
 }

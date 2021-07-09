@@ -1,4 +1,4 @@
-﻿@model List<StudentManagement.Models.Student>
+﻿@model List<Student>
 @{
     ViewBag.Title = "Home";
 }
@@ -12,10 +12,10 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-ms-4">
-                            <img src=@Url.Content(student.Avatar) class="img-responsive" style="width:25%" alt="Image">
+                        <div class="col-sm-4">
+                            <img src=@Url.Content(student.Avatar) class="img-responsive" style="width:100%" alt="Image">
                         </div>
-                        <div class="col-ms-8">
+                        <div class="col-sm-8">
                             <p>Student Id: @student.Id</p>
                             <p>Dob:@student.Dob.ToString("dd/MM/yyyy")</p>
                         </div>

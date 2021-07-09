@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StudentManagement.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace StudentManagement
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddSingleton<IStudentService, StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,6 +29,8 @@ namespace StudentManagement
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //Convension Routing
             
             //app.UseMvcWithDefaultRoute();
             app.UseStaticFiles();

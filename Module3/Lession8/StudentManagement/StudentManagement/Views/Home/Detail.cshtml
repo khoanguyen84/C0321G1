@@ -1,5 +1,31 @@
-﻿@{
+﻿@model Student
+@{
     ViewBag.Title = "Detail";
 }
 
-<h1>Student Detail with Id = @ViewBag.Para1, Para2 = @ViewBag.Para2</h1>
+<h1>More information of @Model.Fullname</h1>
+<div class="card">
+    <div class="card-header bg-success">
+        <h3>@Model.Fullname</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src=@Url.Content(Model.Avatar) style="width:100%"/>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-2">StudentId</div>
+                    <div class="col-sm-10">@Model.Id</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">Date of birth</div>
+                    <div class="col-sm-10">@Model.Dob.ToString("dd/MM/yyyy")</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="/" class="btn btn-warning">Back</a>
+    </div>
+</div>
