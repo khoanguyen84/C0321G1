@@ -350,3 +350,4 @@ C:\CodeGym\Class\C0321G1\Module3\Lession8\StudentManagement\StudentManagement\ob
 C:\CodeGym\Class\C0321G1\Module3\Lession8\StudentManagement\StudentManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ViewStart.cshtml.g.cs
 C:\CodeGym\Class\C0321G1\Module3\Lession8\StudentManagement\StudentManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
 C:\CodeGym\Class\C0321G1\Module3\Lession8\StudentManagement\StudentManagement\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\CodeGym\Class\C0321G1\Module3\Lession8\StudentManagement\StudentManagement\bin\Debug\netcoreapp3.1\libman.json

@@ -1,8 +1,9 @@
-﻿@{
+﻿@model Student
+@{
     ViewBag.Title = "Create";
 }
 
-<form action="/Home/Create" method="POST">
+@*<form action="/Home/Create" method="POST">
     <div class="form-group">
         <label for="Fullname" class="col-2">Fullname:</label>
         <input type="text" class="form-control" placeholder="Fullname" id="Fullname" name="Fullname">
@@ -14,6 +15,26 @@
     <div class="form-group">
         <label for="Avatar">Avatar:</label>
         <input type="text" class="form-control" placeholder="Avatar" id="Avatar" name="Avatar">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>*@
+
+<form asp-controller="Home" asp-action="Create" method="post">
+    @*<div asp-validation-summary="All"></div>*@
+    <div class="form-group">
+        <label asp-for="Fullname" class="col-2"></label>
+        <input class="form-control" placeholder="Fullname" asp-for="Fullname">
+        <span asp-validation-for="Fullname"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dob"></label>
+        <input class="form-control" placeholder="Date of birth" asp-for="Dob">
+        <span asp-validation-for="Dob"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Avatar"></label>
+        <input  class="form-control" placeholder="Avatar" asp-for="Avatar">
+        <span asp-validation-for="Avatar"></span>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

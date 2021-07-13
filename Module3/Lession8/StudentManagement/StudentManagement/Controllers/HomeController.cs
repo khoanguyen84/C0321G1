@@ -36,8 +36,12 @@ namespace StudentManagement.Controllers
         [HttpPost]
         public IActionResult Create(Student student)
         {
-            studentService.Create(student);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                studentService.Create(student);
+                return RedirectToAction("Index");
+            }
+            return View();
         }
 
         //Attribute Routing

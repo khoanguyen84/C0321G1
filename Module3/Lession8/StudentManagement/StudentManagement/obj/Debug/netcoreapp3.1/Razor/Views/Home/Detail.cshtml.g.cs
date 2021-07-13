@@ -20,7 +20,7 @@ using StudentManagement.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6f6a3039f89ef31f9775c69503d178ad58386d24", @"/Views/Home/Detail.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"92f54a46a44bdbf3bf9f69710451470544d94c8a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"96d43d4883e0f39bd91ad4eb6003248aa3094be6", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Detail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Student>
     {
         #pragma warning disable 1998

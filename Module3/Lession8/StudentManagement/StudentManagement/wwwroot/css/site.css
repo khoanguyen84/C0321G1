@@ -13,3 +13,8 @@ footer {
     background-color: #f2f2f2;
     padding: 25px;
 }
+
+.validation-summary-errors,
+.field-validation-error {
+    color: red;
+}
