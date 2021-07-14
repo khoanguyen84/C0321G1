@@ -1,40 +1,68 @@
-﻿@model Student
+﻿@model CreateStudent
 @{
     ViewBag.Title = "Create";
+    List<Department> departments = ViewBag.Departments as List<Department>;
 }
 
 @*<form action="/Home/Create" method="POST">
-    <div class="form-group">
-        <label for="Fullname" class="col-2">Fullname:</label>
-        <input type="text" class="form-control" placeholder="Fullname" id="Fullname" name="Fullname">
-    </div>
-    <div class="form-group">
-        <label for="Dob">Date of birth:</label>
-        <input type="Date" class="form-control" placeholder="Date of birth" id="Dob" name="Dob">
-    </div>
-    <div class="form-group">
-        <label for="Avatar">Avatar:</label>
-        <input type="text" class="form-control" placeholder="Avatar" id="Avatar" name="Avatar">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>*@
+        <div class="form-group">
+            <label for="Fullname" class="col-2">Fullname:</label>
+            <input type="text" class="form-control" placeholder="Fullname" id="Fullname" name="Fullname">
+        </div>
+        <div class="form-group">
+            <label for="Dob">Date of birth:</label>
+            <input type="Date" class="form-control" placeholder="Date of birth" id="Dob" name="Dob">
+        </div>
+        <div class="form-group">
+            <label for="Avatar">Avatar:</label>
+            <input type="text" class="form-control" placeholder="Avatar" id="Avatar" name="Avatar">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>*@
 
-<form asp-controller="Home" asp-action="Create" method="post">
-    @*<div asp-validation-summary="All"></div>*@
-    <div class="form-group">
-        <label asp-for="Fullname" class="col-2"></label>
-        <input class="form-control" placeholder="Fullname" asp-for="Fullname">
-        <span asp-validation-for="Fullname"></span>
+<form enctype="multipart/form-data" asp-controller="Home" asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label asp-for="Avatar"></label>
+                <div class="custom-file">
+                    <img src="~/images/nonavatar.jpg" class="img-circle no-avatar" alt="NoAvatar" />
+                    <input type="file" class="custom-file-input" id="customFile" name="Avatar" accept="image/*">
+                    @*<label class="custom-file-label" for="customFile">Choose file</label>*@
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label asp-for="Fullname"></label>
+                <input class="form-control" placeholder="Fullname" asp-for="Fullname">
+                <span asp-validation-for="Fullname"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dob"></label>
+                <input class="form-control" placeholder="Date of birth" asp-for="Dob">
+                <span asp-validation-for="Dob"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartmentId"></label>
+                <select class="form-control" asp-for="DepartmentId">
+                    @foreach (Department dept in departments)
+                    {
+                        <option value=@dept.DepartmentId>@dept.DepartmentName</option>
+                    }
+
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Dob"></label>
-        <input class="form-control" placeholder="Date of birth" asp-for="Dob">
-        <span asp-validation-for="Dob"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Avatar"></label>
-        <input  class="form-control" placeholder="Avatar" asp-for="Avatar">
-        <span asp-validation-for="Avatar"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    
 </form>
+<script>
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $('.no-avatar').attr('src', window.URL.createObjectURL($(this)[0].files[0]));
+        $(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>

@@ -1,24 +1,23 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace StudentManagement.Models
+namespace StudentManagement.Models.ViewModels
 {
-    public class Student
+    public class CreateStudent
     {
-        public int Id { get; set; }
         [Required(ErrorMessage = "The Fullname is mandatory!")]
-        [StringLength(maximumLength:50, MinimumLength = 10)]
+        [StringLength(maximumLength: 50, MinimumLength = 10)]
         public string Fullname { get; set; }
         [Required(ErrorMessage = "The Dob is mandatory!")]
         [Display(Name = "Date of birth")]
         [DataType(DataType.Date)]
         public DateTime Dob { get; set; }
-        [Required(ErrorMessage = "Avatar can not empty")]
-        public string Avatar { get; set; }
-        public Department Department { get; set; }
+        public IFormFile Avatar { get; set; }
+        [Display(Name = "Department")]
+        public int DepartmentId { get; set; }
     }
 }

@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Models;
+using StudentManagement.Models.ViewModels;
 using StudentManagement.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,10 +14,16 @@ namespace StudentManagement.Controllers
     public class HomeController : Controller
     {
         private readonly IStudentService studentService;
+        private readonly IWebHostEnvironment webHostEnvironment;
+        private readonly IDepartmentService departmentService;
 
-        public HomeController(IStudentService studentService)
+        public HomeController(IStudentService studentService, 
+                        IWebHostEnvironment webHostEnvironment,
+                        IDepartmentService departmentService)
         {
             this.studentService = studentService;
+            this.webHostEnvironment = webHostEnvironment;
+            this.departmentService = departmentService;
         }
         public IActionResult Index()
         {
@@ -30,15 +39,35 @@ namespace StudentManagement.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.Departments = departmentService.GetDepartments();
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Student student)
+        public IActionResult Create(CreateStudent student)
         {
             if (ModelState.IsValid)
             {
-                studentService.Create(student);
+                string filename = "noavatar.jpg";
+                if (student.Avatar != null)
+                {
+                    string folderPath = Path.Combine(webHostEnvironment.ContentRootPath, @"wwwroot\images\");
+                    filename = $"{DateTime.Now.ToString("ddMMyyyyhhmmss")}_{student.Avatar.FileName}";
+                    string fullpath = Path.Combine(folderPath, filename);
+                    using (var file = new FileStream(fullpath, FileMode.Create))
+                    {
+                        student.Avatar.CopyTo(file);
+                    }
+                }
+
+                var newStudent = new Student()
+                {
+                    Avatar = $"/images/{filename}",
+                    Dob = student.Dob,
+                    Fullname = student.Fullname,
+                    Department = departmentService.GetDepartments().FirstOrDefault(d => d.DepartmentId == student.DepartmentId)
+                };
+                studentService.Create(newStudent);
                 return RedirectToAction("Index");
             }
             return View();

@@ -17,21 +17,36 @@ namespace StudentManagement.Services
                     Id = 1,
                     Fullname = "Buu Nguyen",
                     Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "/images/avatar10.jpg"
+                    Avatar = "/images/avatar10.jpg",
+                    Department = new Department()
+                                {
+                                    DepartmentId= 1,
+                                    DepartmentName = "IT"
+                                }
                 },
                 new Student()
                 {
                     Id = 2,
                     Fullname = "Nam Thu",
                     Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "/images/avatar11.jpg"
+                    Avatar = "/images/avatar11.jpg",
+                    Department = new Department()
+                                {
+                                    DepartmentId= 1,
+                                    DepartmentName = "IT"
+                                }
                 },
                 new Student()
                 {
                     Id = 3,
                     Fullname = "Nam Ngoc",
                     Dob = DateTime.Parse("2000-10-10"),
-                    Avatar = "/images/avatar12.jpg"
+                    Avatar = "/images/avatar12.jpg",
+                    Department = new Department()
+                                {
+                                    DepartmentId= 1,
+                                    DepartmentName = "IT"
+                                }
                 }
             };
         }

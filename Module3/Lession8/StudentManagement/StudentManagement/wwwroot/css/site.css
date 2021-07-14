@@ -18,3 +18,9 @@ footer {
 .field-validation-error {
     color: red;
 }
+
+
+.no-avatar{
+    width:200px;
+    height:200px;
+}
