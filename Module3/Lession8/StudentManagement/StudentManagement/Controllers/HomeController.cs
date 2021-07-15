@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using StudentManagement.Models;
+using StudentManagement.Entities;
 using StudentManagement.Models.ViewModels;
 using StudentManagement.Services;
 using System;

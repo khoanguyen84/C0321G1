@@ -1,4 +1,4 @@
-﻿using StudentManagement.Models;
+﻿using StudentManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +18,7 @@ namespace StudentManagement.Services
                     Fullname = "Buu Nguyen",
                     Dob = DateTime.Parse("2000-10-10"),
                     Avatar = "/images/avatar10.jpg",
+                    DepartmentId= 1,
                     Department = new Department()
                                 {
                                     DepartmentId= 1,
@@ -30,6 +31,7 @@ namespace StudentManagement.Services
                     Fullname = "Nam Thu",
                     Dob = DateTime.Parse("2000-10-10"),
                     Avatar = "/images/avatar11.jpg",
+                    DepartmentId= 1,
                     Department = new Department()
                                 {
                                     DepartmentId= 1,
@@ -42,6 +44,7 @@ namespace StudentManagement.Services
                     Fullname = "Nam Ngoc",
                     Dob = DateTime.Parse("2000-10-10"),
                     Avatar = "/images/avatar12.jpg",
+                    DepartmentId= 1,
                     Department = new Department()
                                 {
                                     DepartmentId= 1,
