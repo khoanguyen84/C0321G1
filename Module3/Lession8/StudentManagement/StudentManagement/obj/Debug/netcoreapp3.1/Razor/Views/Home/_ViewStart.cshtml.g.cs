@@ -21,13 +21,20 @@ using StudentManagement.Models;
 #nullable disable
 #nullable restore
 #line 2 "C:\CodeGym\Class\C0321G1\Module3\Lession8\StudentManagement\StudentManagement\Views\_ViewImports.cshtml"
+using StudentManagement.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\CodeGym\Class\C0321G1\Module3\Lession8\StudentManagement\StudentManagement\Views\_ViewImports.cshtml"
 using StudentManagement.Models.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/Home/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"007e4ac484b2f8570a524dafeadb054e26c8de4d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"215e900fd1fb3261ec9ca1276aabeff622b19daa", @"/Views/_ViewImports.cshtml")]
     public class Views_Home__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
