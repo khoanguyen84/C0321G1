@@ -13,5 +13,9 @@
     <ProjectReference Include="..\CGShop.Service\CGShop.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,10 +9,13 @@ namespace CGShop.Service
 {
     public class BaseService
     {
+        private readonly IConfiguration configuration;
         protected IDbConnection connection;
-        public BaseService()
+        public BaseService(IConfiguration configuration)
         {
-            connection = new SqlConnection(@"Data Source=admin\sqlexpress;Initial Catalog=CGShopDB;Integrated Security=True");
+            this.configuration = configuration;
+            connection = new SqlConnection(this.configuration.GetConnectionString("CGShopConnection"));
+            
         }
     }
 }
