@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <a href="javascript:;" class="btn btn-primary mb-2">
+        <i class="fa fa-plus"></i>
+        Create
+    </a>
+    <table id="tbCategory" class="table table-bordered table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Category Name</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+@section Scripts{ 
+    <script src="~/js/category.js" asp-append-version="true"></script>
+}

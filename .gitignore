@@ -30,3 +30,7 @@
 /Module4/CGShop/CGShop.Domain/obj
 /Module4/CGShop/CGShop.Service/bin/Debug/netcoreapp3.1
 /Module4/CGShop/CGShop.Service/obj
+/Module4/CGShop.WebApp/.vs/CGShop.WebApp/config
+/Module4/CGShop.WebApp/CGShop.WebApp/bin/Debug/netcoreapp3.1
+/Module4/CGShop.WebApp/CGShop.WebApp/obj/Debug/netcoreapp3.1
+/Module4/CGShop.WebApp/CGShop.WebApp/obj
