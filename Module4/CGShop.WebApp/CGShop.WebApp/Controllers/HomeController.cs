@@ -1,4 +1,5 @@
-﻿using CGShop.WebApp.Models;
+﻿using CGShop.WebApp.Helper;
+using CGShop.WebApp.Models;
 using CGShop.WebApp.Models.Category;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -31,7 +32,8 @@ namespace CGShop.WebApp.Controllers
         [Route("/Home/Get")]
         public IActionResult Get()
         {
-            WebRequest request = WebRequest.Create(@"https://localhost:44341/api/Category");
+            WebRequest request = WebRequest.Create(@$"{Common.ApiUrl}Category");
+            request.Method = "GET";
             WebResponse response = request.GetResponse();
             string responseFromServer = string.Empty;
             using (Stream dataStream = response.GetResponseStream())
@@ -42,15 +44,29 @@ namespace CGShop.WebApp.Controllers
             return Ok(JsonConvert.DeserializeObject<List<Category>>(responseFromServer));
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        [Route("/Home/Create")]
+        public IActionResult Create([FromBody]CreateCategory model)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            WebRequest request = WebRequest.Create(@$"{Common.ApiUrl}Category");
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            
+            using (var streamWrite = new StreamWriter(request.GetRequestStream()))
+            {
+                var data = JsonConvert.SerializeObject(model);
+                streamWrite.Write(data);
+            }
+            WebResponse response = request.GetResponse();
+            string responseFromServer = string.Empty;
+            using (Stream dataStream = response.GetResponseStream())
+            {
+                StreamReader reader = new StreamReader(dataStream);
+                responseFromServer = reader.ReadToEnd();
+            }
+
+            return Ok(JsonConvert.DeserializeObject<CreateCategoryResult>(responseFromServer));
         }
     }
 }

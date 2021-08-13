@@ -33,6 +33,35 @@ category.showData = function () {
     });
 }
 
+category.openModel = function () {
+    $('#categoryModel').modal('show');
+}
+
+category.save = function () {
+    if ($('#frmCategory').valid()) {
+        var createCategoryObj = {};
+        createCategoryObj.CategoryName = $('input[name="CategoryName"]').val();
+        createCategoryObj.Status = $('input[name="Status"]').is(":checked");
+        $.ajax({
+            url: "https://localhost:44317/Home/Create",
+            method: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify(createCategoryObj),
+            success: function (data) {
+                if (data.success) {
+                    $('#categoryModel').modal('hide');
+                    category.showData();
+                    $.notify(data.message, "success");
+                }
+                else {
+                    $.notify(data.message, "error");
+                }
+            }
+        });
+    }
+}
+
 $(document).ready(function () {
     category.showData();
 });
