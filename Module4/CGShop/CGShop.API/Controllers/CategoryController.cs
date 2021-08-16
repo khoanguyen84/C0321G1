@@ -76,5 +76,13 @@ namespace CGShop.API.Controllers
         {
             return await categoryService.Delete(id);
         }
+
+        [HttpPut]
+        [Route("ChangeStatus")]
+        public async Task<ChangeStatusCategoryResult> ChangeStatus(ChangeStatusCategory model)
+        {
+            return await categoryService.ChangeStatus(model);
+        }
+
     }
 }

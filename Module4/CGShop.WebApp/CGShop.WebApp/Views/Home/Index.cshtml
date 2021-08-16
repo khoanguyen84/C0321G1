@@ -7,7 +7,9 @@
         <i class="fa fa-plus"></i>
         Create
     </a>
-    <table id="tbCategory" class="table table-bordered table-striped table-hover">
+</div>
+<div class="row w-100">
+    <table style="width:100%" id="tbCategory" class="table table-bordered table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
@@ -35,6 +37,7 @@
                     <div class="form-group">
                         <label>Category</label>
                         <input type="text" name="CategoryName" class="form-control" data-rule-required="true" />
+                        <input type="hidden" name="CategoryId" value="0"/>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">

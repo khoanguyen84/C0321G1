@@ -17,6 +17,44 @@ namespace CGShop.Service
         {
 
         }
+
+        public async Task<ChangeStatusCategoryResult> ChangeStatus(ChangeStatusCategory model)
+        {
+            try
+            {
+                var foundCategory = await GetById(model.CategoryId);
+
+                if (foundCategory != null)
+                {
+                    DynamicParameters parameters = new DynamicParameters();
+                    parameters.Add("@categoryId", model.CategoryId);
+                    parameters.Add("@status", model.Status);
+
+                    var categoryId = await SqlMapper.QueryFirstOrDefaultAsync<int>(
+                                            cnn: connection,
+                                            sql: "sp_ChangeStatusCategory",
+                                            param: parameters,
+                                            commandType: CommandType.StoredProcedure
+                                        );
+                    return new ChangeStatusCategoryResult()
+                    {
+                        Success = categoryId > 0
+                    };
+                }
+                return new ChangeStatusCategoryResult()
+                {
+                    Success = false
+                };
+            }
+            catch (Exception)
+            {
+                return new ChangeStatusCategoryResult()
+                {
+                    Success = false
+                };
+            }
+        }
+
         public async Task<CreateCategoryResult> Create(CreateCategory create)
         {
             try

@@ -15,5 +15,6 @@ namespace CGShop.Service
         Task<Category> GetByName(string catName, int categoryId);
         Task<UpdateCategoryResult> Update(UpdateCategory update);
         Task<DeleteCategoryResult> Delete(int categoryId);
+        Task<ChangeStatusCategoryResult> ChangeStatus(ChangeStatusCategory update);
     }
 }

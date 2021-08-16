@@ -16,6 +16,7 @@ namespace CGShop.Domain
                 public static string Delete = "Category has been deleted successful";
                 public static string Exist = "Category has been existed";
                 public static string NotFound = "Category has been not found";
+                public static string ChangeStatus = "Category has been change status successful";
             }
         }
     }

@@ -32,41 +32,43 @@ namespace CGShop.WebApp.Controllers
         [Route("/Home/Get")]
         public IActionResult Get()
         {
-            WebRequest request = WebRequest.Create(@$"{Common.ApiUrl}Category");
-            request.Method = "GET";
-            WebResponse response = request.GetResponse();
-            string responseFromServer = string.Empty;
-            using (Stream dataStream = response.GetResponseStream())
-            {
-                StreamReader reader = new StreamReader(dataStream);
-                responseFromServer = reader.ReadToEnd();
-            }
-            return Ok(JsonConvert.DeserializeObject<List<Category>>(responseFromServer));
+            var data = ApiHelper.HttpGet<List<Category>>(@$"{Common.ApiUrl}Category");
+            return Ok(data);
         }
 
+        [HttpGet]
+        [Route("/Home/Get/{id}")]
+        public IActionResult Get(int id)
+        {
+            var data = ApiHelper.HttpGet<Category>(@$"{Common.ApiUrl}Category/{id}");
+            return Ok(data);
+        }
 
         [HttpPost]
         [Route("/Home/Create")]
-        public IActionResult Create([FromBody]CreateCategory model)
+        public IActionResult Create([FromBody] CreateCategory model)
         {
-            WebRequest request = WebRequest.Create(@$"{Common.ApiUrl}Category");
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            
-            using (var streamWrite = new StreamWriter(request.GetRequestStream()))
-            {
-                var data = JsonConvert.SerializeObject(model);
-                streamWrite.Write(data);
-            }
-            WebResponse response = request.GetResponse();
-            string responseFromServer = string.Empty;
-            using (Stream dataStream = response.GetResponseStream())
-            {
-                StreamReader reader = new StreamReader(dataStream);
-                responseFromServer = reader.ReadToEnd();
-            }
+            return Ok(ApiHelper.HttpPost<CreateCategoryResult>(@$"{Common.ApiUrl}Category", "POST", model));
+        }
 
-            return Ok(JsonConvert.DeserializeObject<CreateCategoryResult>(responseFromServer));
+        [HttpPut]
+        [Route("/Home/ChangeStatus")]
+        public IActionResult ChangeStatus([FromBody] ChangeStatusCategory model)
+        {
+            return Ok(ApiHelper.HttpPost<ChangeStatusCategoryResult>(@$"{Common.ApiUrl}Category/ChangeStatus", "PUT", model));
+        }
+        [HttpPut]
+        [Route("/Home/Update")]
+        public IActionResult Update([FromBody] UpdateCategory model)
+        {
+            return Ok(ApiHelper.HttpPost<UpdateCategoryResult>(@$"{Common.ApiUrl}Category", "PUT", model));
+        }
+
+        [HttpDelete]
+        [Route("/Home/Remove/{id}")]
+        public IActionResult Remove(int id)
+        {
+            return Ok(ApiHelper.HttpGet<DeleteCategoryResult>(@$"{Common.ApiUrl}Category/{id}", "DELETE"));
         }
     }
 }
